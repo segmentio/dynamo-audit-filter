@@ -37,10 +37,8 @@ def lambda_handler(event, context):
         combined_events = []
 
         # Look for actions done by a human user.
-        # Since this is just the test and it's not registering human events,
-        # match everything.
         for record in extracted['Records']:
-            if re.search(".*", record["userIdentity"]["arn"]):
+            if re.search("^.*@segment.com", record["userIdentity"]["principalId"]):
                 print(entry)
                 combined_events.append(entry)
                 
