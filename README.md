@@ -1,2 +1,4 @@
 # dynamo-audit-filter
-Lambda to filter out non-human data plane events from Dynamo.
+
+This is a blank template for dynamo-audit-filter
+
